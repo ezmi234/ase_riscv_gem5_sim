@@ -47,6 +47,7 @@ RUN git clone --recursive https://github.com/riscv-collab/riscv-gnu-toolchain /o
 
 # Clone gem5
 RUN git clone --recursive https://github.com/gem5/gem5 /opt/gem5
+RUN cd /opt/gem5 && git checkout v22.1.0.0
 
 # Build the 64-bit RV64GC toolchain with glibc
 RUN cd /opt/riscv-gnu-toolchain && ./configure --prefix=/opt/riscv
